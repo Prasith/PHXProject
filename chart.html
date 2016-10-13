@@ -1,0 +1,143 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>Previa</title>
+	  <meta charset="utf-8" />
+
+	  <link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap.css">
+	  <link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap-theme.css">
+	  <link rel="stylesheet" href="lib/bootstrap-select-1.11.2/dist/css/bootstrap-select.css">
+	  <link rel="stylesheet" href="css/style.css"/>
+	  <link rel="stylesheet" href="lib/vitalets-bootstrap-datepicker/css/datepicker.css"/>
+	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
+
+	</head>
+
+	<body>
+			<div id="bandeau" ></div>
+
+	<div class="container-fluid">   
+		<div class="row">
+					 <div id="header"><strong class="police1"> Plateforme Previa: Prévision </strong> <p class ="police2"> Connecté </p></div>        
+		</div>
+	</div>
+
+	<div class="container">    
+			<div class="row">
+				  <div class="col-md-4 nopadding" style="background-color:#e6f7ff;">
+					 <div class="panel-heading"><center><strong> Selection des previsions </strong></center> </div>			             
+								<center>
+									<select class="selectpicker">Année
+									  <option>2016</option>
+									  <option>2015</option>
+									  <option>2014</option>
+									</select>
+								</center>	
+						</br> 
+								<center>
+									<select class="selectpicker"> Type de prévision
+									  <option>Travail</option>
+									  <option>Loisir</option>
+									  <option>Parc</option>
+									</select>
+								</center>	
+						</br>
+								<center>
+									<select class="selectpicker"> Lots de prévision
+									  <option>A86</option>
+									  <option>N104</option>
+									  <option>A04</option>
+									</select>
+								</center>	
+						</br>
+									<center>
+										<select class="selectpicker"> Section de prévision
+									  <option>Paris-Amiens</option>
+									  <option>Lille-Lyon</option>
+									  <option>Rennes-Dijon</option>
+									</select>
+								</center>	
+						</br>   
+
+									<center><strong>Date: <div id="datepicker" size="30"></strong> </div></center>
+						</br>   
+
+									  <div class="panel" style="background-color:#80e1ff;">
+									      <center><div class="panel-heading"><strong>Journée équivalente</strong></div></center>
+									  </div>
+						</br>   
+
+						<center><strong>Variable (selection multiple):</strong></center>
+
+						<div class="list-group">
+						    <button type="button" href="#" class="list-group-item" style="background-color:#80e1ff;">Colis
+ 							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+						    <button  type="button" href="#" class="list-group-item">Poids</button>
+						    <button type="button" href="#" class="list-group-item">Position</button>
+						</div>
+
+						</br>   
+
+					 		<center>
+					 			 <button type="button" class="btn btn-default" style="width: 70%; background-color:#b3b3b3;">
+					 			 	<strong>Exporter</strong>
+					 				<span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span></a>
+								</button>
+					  		</center>
+
+  					</br></br>   
+  
+				  </div>
+
+				  <div class="col-md-8 ">
+				 		 <div class="panel nopadding">
+		    	   			 <div id="chart_div" style="width: 1400px; height: 800px;"></div>
+		    	   		 </div>
+	    	   		 	<div class="row">	   		 		
+    	   		 				<div class="col-md-3">
+	    	   		 			<div class="panel-heading nopadding" >
+	    	   		 				<center><strong>Risque de perturbation</strong>
+	    	   		 				<div class="panel-body" style="width: 120%; background-color: #ffa31a;"><strong>Risque Moyen</strong></div>
+	    	   		 			</center>
+	    	   		 			</div>
+	    	   		 		</div>	
+	    	   		 		<div class="col-md-3">
+	    	   		 			<div class="panel-heading nopadding" >
+	    	   		 				<center><strong>Valeur Maximale</strong>
+	    	   		 				<div class="panel-body" style="width: 120%;"><strong>3000 à 10h</strong></div>
+	    	   		 			</center>
+	    	   		 			</div>
+	    	   		 		</div>	  
+	    	   		 			<div class="col-md-3">
+	    	   		 			<div class="panel-heading nopadding" >
+	    	   		 				<center><strong>Effectif Planifié</strong>
+	    	   		 				<div class="panel-body" style="width: 120%;"><strong>3</strong></div>
+	    	   		 			</center>
+	    	   		 			</div>
+	    	   		 		</div>	
+	    	   		 			<div class="col-md-3">
+	    	   		 			<div class="panel-heading nopadding" >
+	    	   		 				<center><strong>Cumul journalier</strong>
+	    	   		 				<div class="panel-body" style="width: 120%;"><strong>40 000</strong></div>
+	    	   		 			</center>
+	    	   		 			</div>
+	    	   		 		</div>	
+	    	   		 	</div>
+		    	   		 	
+		    	   	</div>
+			</div>
+	</div>
+
+			
+					 <div id="footer"></div>        
+
+	<script src="lib/jquery-1.12.4.min.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="js/graph.js"></script>
+	<script src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+	<script src="lib/bootstrap-select-1.11.2/js/bootstrap-select.js"></script>
+	<script src="lib/vitalets-bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="js/datepicker.js"></script>
+
+	</body>
+	</html>
