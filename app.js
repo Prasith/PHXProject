@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp',[]);
+var previaApp = angular.module('previaApp',[]);
 
-myApp.controller('myCtrl', ['$scope', function($scope) {
+previaApp.controller('myCtrl', ['$scope', function($scope) {
 
 $scope.buttonToggle = function(buttonNumber){
 
