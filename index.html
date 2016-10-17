@@ -12,7 +12,6 @@
 	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
 
     <script src="lib/angular.js"></script>
-    <script src="app.js"></script>
 
 	</head>
 
@@ -72,12 +71,12 @@
 
 						<center><strong>Variable (selection multiple):</strong></center>
 
-						<div class="list-group">
-						    <button type="button" href="#" class="list-group-item" style="background-color:#80e1ff;">Colis
- 							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
-						    <button  type="button" href="#" class="list-group-item">Poids</button>
-						    <button type="button" href="#" class="list-group-item">Position</button>
-						</div>
+						 <div class="list-group">
+                            <button type = "button" class="list-group-item" ng-class="[pickChosen == 1? 'clicked' : 'default']" ng-click=" buttonToggle(1);" >Colis 
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+                              <button type = "button" class="list-group-item" ng-class="[pickChosen == 2? 'clicked' : 'default']" ng-click=" buttonToggle(2);"  >Poids  </button>
+                           <button type = "button" class="list-group-item" ng-class="[pickChosen == 3? 'clicked' : 'default']" ng-click=" buttonToggle(3);" >Position </button>
+                        </div>
 
 						</br>   
 
@@ -134,7 +133,7 @@
 			
 					 <div id="footer"></div>     
 
-	<script src="controllers/myCtrl.js"></script>
+	<script src="myCtrl.js"></script>
 	<script src="lib/jquery-1.12.4.min.js"></script>
 	<script src="js/loader.js"></script>
 	<script src="js/graph.js"></script>
