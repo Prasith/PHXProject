@@ -11,9 +11,12 @@
 	  <link rel="stylesheet" href="lib/vitalets-bootstrap-datepicker/css/datepicker.css"/>
 	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
 
+    <script src="lib/angular.js"></script>
+    <script src="app.js"></script>
+
 	</head>
 
-	<body>
+	<body ng-app="myApp" ng-controller="myCtrl">
 			<div id="bandeau" ></div>
 
 	<div class="container-fluid">   
@@ -129,8 +132,9 @@
 	</div>
 
 			
-					 <div id="footer"></div>        
+					 <div id="footer"></div>     
 
+	<script src="controllers/myCtrl.js"></script>
 	<script src="lib/jquery-1.12.4.min.js"></script>
 	<script src="js/loader.js"></script>
 	<script src="js/graph.js"></script>
