@@ -10,8 +10,9 @@
 	  <link rel="stylesheet" href="css/style.css"/>
 	  <link rel="stylesheet" href="lib/vitalets-bootstrap-datepicker/css/datepicker.css"/>
 	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
-
-    <script src="lib/angular.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
 
 	</head>
 
@@ -70,15 +71,13 @@
 						</br>   
 
 						<center><strong>Variable (selection multiple):</strong></center>
-
-						 <div class="list-group">
-                            <button type = "button" class="list-group-item" ng-class="[pickChosen == 1? 'clicked' : 'default']" ng-click=" buttonToggle(1);" >Colis 
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
-                              <button type = "button" class="list-group-item" ng-class="[pickChosen == 2? 'clicked' : 'default']" ng-click=" buttonToggle(2);"  >Poids  </button>
-                           <button type = "button" class="list-group-item" ng-class="[pickChosen == 3? 'clicked' : 'default']" ng-click=" buttonToggle(3);" >Position </button>
-                        </div>
-
-						</br>   
+			                  <div class="list-group" >
+			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 0? 'clicked' : 'default']" ng-click="data = donnee1;  buttonToggle(0);">Colis 
+			                      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 1? 'clicked' : 'default']" ng-click=" data = donnee2; buttonToggle(1);">Poids  </button>
+			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 2? 'clicked' : 'default']" ng-click=" data = donnee3; buttonToggle(2);">Position </button>
+			                  </div>
+                        </br>   
 
 					 		<center>
 					 			 <button type="button" class="btn btn-default" style="width: 70%; background-color:#b3b3b3;">
@@ -93,7 +92,7 @@
 
 				  <div class="col-md-8 ">
 				 		 <div class="panel nopadding">
-		    	   			 <div id="chart_div" style="width: 1400px; height: 800px;"></div>
+		    	   			 <canvas class="chart chart-bar"  chart-data="data" chart-labels="labels" chart-colors="colors" style="height : 5000px; width :8000px;"></canvas>
 		    	   		 </div>
 	    	   		 	<div class="row">	   		 		
     	   		 				<div class="col-md-3">
@@ -135,8 +134,6 @@
 
 	<script src="app.js"></script>
 	<script src="lib/jquery-1.12.4.min.js"></script>
-	<script src="js/loader.js"></script>
-	<script src="js/graph.js"></script>
 	<script src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 	<script src="lib/bootstrap-select-1.11.2/js/bootstrap-select.js"></script>
 	<script src="lib/vitalets-bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
