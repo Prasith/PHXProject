@@ -10,9 +10,9 @@
 	  <link rel="stylesheet" href="css/style.css"/>
 	  <link rel="stylesheet" href="lib/vitalets-bootstrap-datepicker/css/datepicker.css"/>
 	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
-	<script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-	<script src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
+	  <script src="node_modules/angular/angular.js"></script>
+	  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+	  <script src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
 
 	</head>
 
@@ -26,111 +26,93 @@
 	</div>
 
 	<div class="container">    
-			<div class="row">
-				  <div class="col-md-4 nopadding" style="background-color:#e6f7ff;">
-					 <div class="panel-heading"><center><strong> Selection des previsions </strong></center> </div>			             
-								<center>
-									<select class="selectpicker">Année
-									  <option>2016</option>
-									  <option>2015</option>
-									  <option>2014</option>
-									</select>
-								</center>	
-						</br> 
-								<center>
-									<select class="selectpicker"> Type de prévision
-									  <option>Travail</option>
-									  <option>Loisir</option>
-									  <option>Parc</option>
-									</select>
-								</center>	
-						</br>
-								<center>
-									<select class="selectpicker"> Lots de prévision
-									  <option>A86</option>
-									  <option>N104</option>
-									  <option>A04</option>
-									</select>
-								</center>	
-						</br>
-									<center>
-										<select class="selectpicker"> Section de prévision
-									  <option>Paris-Amiens</option>
-									  <option>Lille-Lyon</option>
-									  <option>Rennes-Dijon</option>
-									</select>
-								</center>	
-						</br>   
+		<div class="row">
+		  <div class="col-md-4 nopadding" style="background-color:#e6f7ff;">
+			 <div class="panel-heading"><center><strong> Selection des previsions </strong></center> </div>			             
+						<center>
+							<select class="selectpicker" ng-model="SelectYear" ng-options="x for x in year" >Année</select>
+						</center>	
+				</br> 
+						<center>
+							<select class="selectpicker" ng-model="SelectPlace" ng-options="x for x in place"> Type de prévision </select>
+						</center>	
+				</br>
+						<center>
+							<select class="selectpicker" ng-model="SelectRoad" ng-options="x for x in road"> Lots de prévision</select>
+						</center>	
+				</br>
+							<center>
+								<select class="selectpicker" ng-model="SelectSegment" ng-options="x for x in segment"> Section de prévision</select>
+						</center>	
+				</br>   
 
-									<center><strong>Date: <div id="datepicker" size="30"></strong> </div></center>
-						</br>   
+							<center><strong>Date: <div id="datepicker" size="30"></strong> </div></center>
+				</br>   
 
-									  <div class="panel" style="background-color:#80e1ff;">
-									      <center><div class="panel-heading"><strong>Journée équivalente</strong></div></center>
-									  </div>
-						</br>   
+							  <div class="panel" style="background-color:#80e1ff;">
+							      <center><div class="panel-heading"><strong>Journée équivalente</strong></div></center>
+							  </div>
+				</br>   
 
-						<center><strong>Variable (selection multiple):</strong></center>
-			                  <div class="list-group" >
-			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 0? 'clicked' : 'default']" ng-click="data = donnee1;  buttonToggle(0);">Colis 
-			                      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
-			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 1? 'clicked' : 'default']" ng-click=" data = donnee2; buttonToggle(1);">Poids  </button>
-			                    <button type = "button" class="list-group-item" ng-class="[pickChosen == 2? 'clicked' : 'default']" ng-click=" data = donnee3; buttonToggle(2);">Position </button>
-			                  </div>
-                        </br>   
+					<center><strong>Variable (selection multiple):</strong></center>
+		                  <div class="list-group" >
+		                    <div class="list-group-item" ng-class="[pickChosen == 0? 'clicked' : 'default']" ng-click="data = donnee1;  buttonToggle(0);">Colis 
+		                      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></div>
+		                    <div  class="list-group-item" ng-class="[pickChosen == 1? 'clicked' : 'default']" ng-click=" data = donnee2; buttonToggle(1);">Poids  </div>
+		                    <div  class="list-group-item" ng-class="[pickChosen == 2? 'clicked' : 'default']" ng-click=" data = donnee3; buttonToggle(2);">Position </div>
+		                  </div>
+                </br>   
 
-					 		<center>
-					 			 <button type="button" class="btn btn-default" style="width: 70%; background-color:#b3b3b3;">
-					 			 	<strong>Exporter</strong>
-					 				<span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span></a>
-								</button>
-					  		</center>
+			 		<center>
+			 			 <button type="button" class="btn btn-default" style="width: 70%; background-color:#b3b3b3;">
+			 			 	<strong>Exporter</strong>
+			 				<span class="glyphicon glyphicon glyphicon-open" aria-hidden="true"></span></a>
+						</button>
+			  		</center>
 
-  					</br></br>   
+				</br></br>   
   
 				  </div>
 
-				  <div class="col-md-8 ">
-				 		 <div class="panel nopadding">
-		    	   			 <canvas class="chart chart-bar"  chart-data="data" chart-labels="labels" chart-colors="colors" style="height : 5000px; width :8000px;"></canvas>
-		    	   		 </div>
-	    	   		 	<div class="row">	   		 		
-    	   		 				<div class="col-md-3">
-	    	   		 			<div class="panel-heading nopadding" >
-	    	   		 				<center><strong>Risque de perturbation</strong>
-	    	   		 				<div class="panel-body" style="width: 120%; background-color: #ffa31a;"><strong>Risque Moyen</strong></div>
-	    	   		 			</center>
-	    	   		 			</div>
-	    	   		 		</div>	
-	    	   		 		<div class="col-md-3">
-	    	   		 			<div class="panel-heading nopadding" >
-	    	   		 				<center><strong>Valeur Maximale</strong>
-	    	   		 				<div class="panel-body" style="width: 120%;"><strong>3000 à 10h</strong></div>
-	    	   		 			</center>
-	    	   		 			</div>
-	    	   		 		</div>	  
-	    	   		 			<div class="col-md-3">
-	    	   		 			<div class="panel-heading nopadding" >
-	    	   		 				<center><strong>Effectif Planifié</strong>
-	    	   		 				<div class="panel-body" style="width: 120%;"><strong>3</strong></div>
-	    	   		 			</center>
-	    	   		 			</div>
-	    	   		 		</div>	
-	    	   		 			<div class="col-md-3">
-	    	   		 			<div class="panel-heading nopadding" >
-	    	   		 				<center><strong>Cumul journalier</strong>
-	    	   		 				<div class="panel-body" style="width: 120%;"><strong>40 000</strong></div>
-	    	   		 			</center>
-	    	   		 			</div>
-	    	   		 		</div>	
-	    	   		 	</div>
+	  	<div class="col-md-8 ">
+		 		 <div class="panel">
+		   			 <canvas class="chart chart-bar"  chart-data="data" chart-labels="labels" chart-colors="colors" width="1000" height="1000"></canvas>
+		   		 </div>
+				 	<div class="row">	   		 		
+			 				<div class="col-md-3">
+				 			<div class="panel-heading nopadding" >
+				 				<center><strong>Risque de perturbation</strong>
+				 				<div class="panel-body" ng-repeat=" x in perturbation" style="width: 120%; background-color: #ffa31a;"><strong>{{x}}</strong></div>
+				 			</center>
+				 			</div>
+				 		</div>	
+				 		<div class="col-md-3">
+				 			<div class="panel-heading nopadding" >
+				 				<center><strong>Valeur Maximale</strong>
+				 				<div class="panel-body" ng-repeat=" x in max" style="width: 120%;"><strong>{{x}}</strong></div>
+				 			</center>
+				 			</div>
+				 		</div>	  
+				 			<div class="col-md-3">
+				 			<div class="panel-heading nopadding" >
+				 				<center><strong>Effectif Planifié</strong>
+				 				<div class="panel-body" ng-repeat=" x in effectif" style="width: 120%;"><strong>{{x}}</strong></div>
+				 			</center>
+				 			</div>
+				 		</div>	
+				 			<div class="col-md-3">
+				 			<div class="panel-heading nopadding" >
+				 				<center><strong>Cumul journalier</strong>
+				 				<div class="panel-body" ng-repeat=" x in cumul" style="width: 120%;"><strong>{{x}}</strong></div>
+				 			</center>
+				 			</div>
+				 		</div>	
+				 	</div>
 		    	   		 	
-		    	   	</div>
-			</div>
+	   			</div>
+		</div>
 	</div>
-
-			
-					 <div id="footer"></div>     
+				 <div id="footer"></div>     
 
 	<script src="app.js"></script>
 	<script src="lib/jquery-1.12.4.min.js"></script>

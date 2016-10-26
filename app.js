@@ -1,61 +1,82 @@
-var previaApp = angular.module('previaApp',['chart.js']);
+	var previaApp = angular.module('previaApp',['chart.js']);
 
-previaApp.controller('myCtrl', function($scope) {
+	previaApp.controller('myCtrl', function($scope) {
 
-	$scope.buttonToggle = function(buttonNumber){
+		$scope.buttonToggle = function(buttonNumber){
 
-		this.pickChosen = buttonNumber === this.pickChosen? 0:buttonNumber;
+			this.pickChosen = buttonNumber ;
+			this.pickChosen? 0:buttonNumber;
 
-console.log($scope.data);
-console.log(buttonNumber);
+		
+	console.log($scope.data);
+	console.log(buttonNumber);
 
-}
+	}
+
+	$scope.data = [];
+
+	$scope.data = function($scope){
+		
+
+		if ($scope.data = []){
+
+			$scope.data = donnee0;
+
+		}
+
+		console.log($scope.data);
+
+	}
+
+	$scope.donnee0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	$scope.donnee1 = [1388, 1592, 803, 819, 1566, 1552, 3012, 1648, 2652, 1932, 2634, 2543, 3912, 1934, 1875, 2734, 1633, 822, 2943, 893, 1633, 1749, 1636, 2494]; 
+	$scope.donnee2 = [2666, 2032, 1953, 1863, 2753, 903, 995, 3443, 2652, 1932, 2634, 2543, 2912, 1934, 1875, 2734, 1633, 822, 2943, 1893, 1633, 1749, 1636, 2794];
+	$scope.donnee3 = [3086, 2042, 2953, 1363, 2793, 1543, 2295, 1343, 1452, 1932, 2634, 2343, 2212, 1234, 835, 2034, 1333, 1322, 2323, 1893, 1633, 4249, 1536, 2194];
+	
+
+	$scope.labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
+	
+	$scope.colors = ['#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD',
+	'#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD'];
+
+	$scope.year = [2016, 2015, 2014];
+	$scope.SelectYear = 2016;
+
+	$scope.place = ['Travail', 'Loisir', 'Parc'];
+	$scope.SelectPlace = 'Travail';
+
+	$scope.road = ['A86', 'N104', 'A4'];
+	$scope.SelectRoad = 'A86';
+
+	$scope.segment = ['Paris-Amien', 'Lille-Lyon', 'Rennes-Dijon'];
+	$scope.SelectSegment ='Paris-Amien';
 
 
- $scope.labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
- // $scope.series = ['Series A', 'Series B'];
+	$scope.perturbation =['Risque Moyen'];
+	$scope.max = ['3000 à 10h'];
+	$scope.effectif = [3];
+	$scope.cumul = [40000];
 
- $scope.data = [];
+	//console.log($scope.colors);
 
-$scope.donnee1 = [1388, 592, 803, 819, 566, 552, 3012, 648, 2652, 932, 2634, 2543, 3912, 934, 875, 2734, 633, 822, 2943, 893, 633, 749, 636, 2494]; 
-$scope.donnee2 = [2666, 2032, 1953, 863, 2753, 903, 995, 3443, 2652, 932, 2634, 2543, 2912, 934, 875, 2734, 633, 822, 2943, 893, 633, 749, 636, 2794];
-$scope.donnee3 = [3086, 2042, 2953, 1363, 2793, 543, 2295, 343, 452, 932, 2634, 2343, 2212, 1234, 835, 2034, 333, 1322, 2323, 893, 633, 4249, 536, 2194];
-$scope.colors = ['#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD',
-'#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD'];
+	});
 
-console.log($scope.colors);
 
-});
+	/* Autre fonction de fonctionner plus barbare
+	if (buttonNumber == 0){
 
-/*
-app.controller("BarCtrl", function ($scope) {
-  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  $scope.series = ['Series A', 'Series B'];
+	$scope.data = donnee1;
+	}
 
-  $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90],
-    [67, 56, 34, 78, 36, 27, 78],
-    [86, 56, 75, 28, 39, 65, 98]
+	else if ( buttonNumber == 1){
 
-  ];
-});
+	$scope.data = donnee2;
 
-/*
-if (buttonNumber == 0){
+	}
 
-$scope.data = donnee1;
-}
+	else 
 
-else if ( buttonNumber == 1){
+	$scope.data = donnee3;
 
-$scope.data = donnee2;
-
-}
-
-else 
-
-$scope.data = donnee3;
-
-}
-*/
+	}
+	*/

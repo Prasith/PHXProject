@@ -56,9 +56,13 @@ color: #80e1ff;
 .list-group-item.default {
 background-color: #ffffff;
 }
-.list-group-item.clicked:hover{
+
+
+.list-group-item:hover{
   background-color: #80e1ff;
+  cursor: pointer;
 }
+
 
 
 
