@@ -1,4 +1,16 @@
-	var previaApp = angular.module('previaApp',['chart.js','ui.bootstrap.datetimepicker']);
+	var previaApp = angular.module('previaApp',['chart.js','ui.bootstrap.datetimepicker', 'ngRoute']);
+
+
+	previaApp.config(function($routeProvider) {
+    $routeProvider
+    //.when("/", {
+    //    templateUrl : "main.html",
+ 	//   })
+    .when("/dashboard", {
+        templateUrl : "views/dashboard.html",
+        controller : "myCtrl"
+    })
+});
 
 //Fonction pour le changement de couleur du bouton
 
@@ -14,6 +26,7 @@
 	console.log(buttonNumber);
 
 	}
+
 
 //scope du graph
 
