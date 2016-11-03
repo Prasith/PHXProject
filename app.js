@@ -1,4 +1,6 @@
-	var previaApp = angular.module('previaApp',['chart.js']);
+	var previaApp = angular.module('previaApp',['chart.js','ui.bootstrap.datetimepicker']);
+
+//Fonction pour le changement de couleur du bouton
 
 	previaApp.controller('myCtrl', function($scope) {
 
@@ -13,6 +15,8 @@
 
 	}
 
+//scope du graph
+
 	$scope.data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 	$scope.donnee1 = [1388, 1592, 803, 819, 1566, 1552, 3012, 1648, 2652, 1932, 2634, 2543, 3912, 1934, 1875, 2734, 1633, 822, 2943, 893, 1633, 1749, 1636, 2494]; 
@@ -24,6 +28,8 @@
 	
 	$scope.colors = ['#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD',
 	'#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD', '#97BBCD'];
+
+//scope du select
 
 	$scope.year = [2016, 2015, 2014];
 	$scope.SelectYear = 2016;
@@ -37,13 +43,12 @@
 	$scope.segment = ['Paris-Amien', 'Lille-Lyon', 'Rennes-Dijon'];
 	$scope.SelectSegment ='Paris-Amien';
 
+//scope valeur bottom
 
 	$scope.perturbation =['Risque Moyen'];
 	$scope.max = ['3000 à 10h'];
 	$scope.effectif = [3];
 	$scope.cumul = [40000];
-
-	//console.log($scope.colors);
 
 	});
 

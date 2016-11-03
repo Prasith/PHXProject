@@ -63,6 +63,10 @@ background-color: #ffffff;
   cursor: pointer;
 }
 
+.form-control-select{
+
+	width: 200px;
+}
 
 
 
