@@ -21,17 +21,20 @@
 		</div>
 	</div>
 
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#"><strong>Home</strong></a></li>
+		      <li><a href="#dashboard"><strong>Dashboard</strong></a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#connexion"><span class="glyphicon glyphicon-log-in"></span><strong>Login</strong></a></li>
+		      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+		    </ul>
+		  </div>
 
-						<p><a href="#/">Main</a></p>
+				<div ng-view></div>
 
-						<a href="#dashboard">Dashboard</a>
-						<a href="#connexion">Connexion</a>
-
-						<div ng-view></div>
-
-
-	
-				 <div id="footer"></div>    
+			    <div id="footer"></div>    
 
 	    <script src="node_modules/angular/angular.js"></script>
 	    <script src="node_modules/moment/moment.js"></script>
