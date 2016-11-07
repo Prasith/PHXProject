@@ -13,15 +13,13 @@
 	</head>
 
 	<body ng-app="previaApp" ng-controller="myCtrl">
-			<div id="bandeau" ></div>
-
-	<div class="container-fluid">   
-		<div class="row">
-			<div id="header"><strong class="police1"> Plateforme Previa: Prévision </strong> <p class ="police2"> Connecté </p></div>        
+		<div id="bandeau" ></div>
+		<div class="container-fluid">   
+			<div class="row">
+				<div id="header"><strong class="police1"> Plateforme Previa: Prévision </strong> <p class ="police2"> Connecté </p></div>        
+			</div>
 		</div>
-	</div>
-
-		  <div class="container-fluid">
+		<div class="container-fluid">
 		    <ul class="nav navbar-nav">
 		      <li class="active"><a href="#"><strong>Home</strong></a></li>
 		      <li><a href="#dashboard"><strong>Dashboard</strong></a></li>
@@ -30,11 +28,9 @@
 		      <li><a href="#connexion"><span class="glyphicon glyphicon-log-in"></span><strong>Login</strong></a></li>
 		      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
 		    </ul>
-		  </div>
-
-				<div ng-view></div>
-
-			    <div id="footer"></div>    
+		</div>
+		<div ng-view></div>
+	    <div id="footer"></div>    
 
 	    <script src="node_modules/angular/angular.js"></script>
 	    <script src="node_modules/moment/moment.js"></script>
@@ -46,9 +42,7 @@
 	 	<script src="lib/jquery-1.12.4.min.js"></script>
 	 	<script src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 		<script src="app.js"></script>
-		<script src="components/dashboard_c.js"></script>
+		<script src="dashboard/dashboardCTRL.js"></script>
 	
-
-
 	</body>
 	</html>
