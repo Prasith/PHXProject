@@ -3,7 +3,7 @@ var previaApp = angular.module('previaApp',['chart.js','ui.bootstrap.datetimepic
 	previaApp.config(function($routeProvider) {
     $routeProvider
     	.when("/dashboard", {
-	        templateUrl : "dashboard/dashboard.html",
+	        templateUrl : "components/dashboard/dashboard.html",
 	        controller : "myCtrl"
     	})
 	});
