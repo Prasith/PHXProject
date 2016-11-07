@@ -10,22 +10,9 @@
 	  <link rel="icon" type="favicon.png" href="Images/phxx.png" />
 	</head>
 	<body ng-app="previaApp" ng-controller="myCtrl">
-		<div id="bandeau" ></div>
-		<div class="container-fluid">   
-			<div class="row">
-				<div id="header"><strong class="police1"> Plateforme Previa: Prévision </strong> <p class ="police2"> Connecté </p></div>        
-			</div>
-		</div>
-		<div class="container-fluid">
-		    <ul class="nav navbar-nav">
-		      <li class="active"><a href="#"><strong>Home</strong></a></li>
-		      <li><a href="#dashboard"><strong>Dashboard</strong></a></li>
-		    </ul>
-		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="#connexion"><span class="glyphicon glyphicon-log-in"></span><strong>Login</strong></a></li>
-		      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-		    </ul>
-		</div>
+
+		<header></header>
+	
 		<div ng-view></div>
 	    <div id="footer"></div>    
 
@@ -40,6 +27,7 @@
 	 	<script src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 		<script src="app.js"></script>
 		<script src="components/dashboard/dashboardCTRL.js"></script>
+		<script src="components/directives/header_d.js"></script>
 	
 	</body>
 </html>
