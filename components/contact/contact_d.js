@@ -1,5 +1,5 @@
 previaApp.directive("contact", function() {
     return {
-        templateUrl : "components/templates/contact_d.html"
+        templateUrl : "components/contact/contact_d.html"
     };
 });

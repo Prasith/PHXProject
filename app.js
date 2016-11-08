@@ -9,5 +9,8 @@ var previaApp = angular.module('previaApp',['chart.js','ui.bootstrap.datetimepic
 	    .when("/home", {
 	        templateUrl : "components/home/home.html"
     	})
+    	.when("/login", {
+	        templateUrl : "components/login/login.html"
+    	})
 	});
 
