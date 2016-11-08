@@ -5,7 +5,6 @@ previaApp.controller('contactCTRL', function($scope, $location) {
 
    	//$scope.contact = "Contact us here from " + $scope.myPath;
 
-
    	$scope.contact = function(){
 
 	    if ($scope.myPath == '/home'){
@@ -21,7 +20,7 @@ previaApp.controller('contactCTRL', function($scope, $location) {
 
 	$scope.contact();
 
-	console.log($scope.contact);
-	console.log($scope.myPath);
+	//console.log($scope.contact);
+	//console.log($scope.myPath);
 
 });
